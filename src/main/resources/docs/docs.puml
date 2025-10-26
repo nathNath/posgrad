@@ -1,0 +1,46 @@
+@startuml
+class Cliente {
+    - Long id
+    - String nome
+    - String email
+    + getId(): Long
+    + getNome(): String
+    + getEmail(): String
+    + setId(Long): void
+    + setNome(String): void
+    + setEmail(String): void
+}
+
+interface ClienteRepository {
+    + findByNome(nome: String): List<Cliente>
+    + save(cliente: Cliente): Cliente
+    + findById(id: Long): Optional<Cliente>
+    + findAll(): List<Cliente>
+    + deleteById(id: Long): void
+}
+
+class ClienteService {
+    - ClienteRepository clienteRepository
+    + listarTodos(): List<Cliente>
+    + buscarPorId(id: Long): Optional<Cliente>
+    + buscarPorNome(nome: String): List<Cliente>
+    + salvar(cliente: Cliente): Cliente
+    + deletar(id: Long): void
+    + contarClientes(): long
+}
+
+class ClienteController {
+    - ClienteService clienteService
+    + listarTodos(): List<Cliente>
+    + buscarPorId(id: Long): ResponseEntity<Cliente>
+    + buscarPorNome(nome: String): List<Cliente>
+    + contarClientes(): long
+    + salvar(cliente: Cliente): Cliente
+    + deletar(id: Long): void
+    + atualizar(id: Long, clienteAtualizado: Cliente): ResponseEntity<Cliente>
+}
+
+ClienteController --> ClienteService
+ClienteService --> ClienteRepository
+ClienteRepository --> Cliente
+@enduml
