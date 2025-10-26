@@ -14,7 +14,7 @@ O conteúdo está organizado por módulo/disciplina para facilitar a navegação
 
 | Pasta         | Descrição                    | Tecnologias Chave |
 |:--------------|:-----------------------------| :--- |
-| **`desafio`** | API Rest com Arquitetura MVC | Java, Spring Boot, PostgreSQL |
+| **`src`** | API Rest com Arquitetura MVC | Java, Spring Boot, PostgreSQL |
 
 **Para navegar:**
 1.  Clique na pasta do tema que lhe interessa.
