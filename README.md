@@ -29,7 +29,7 @@ As principais tecnologias e *frameworks* utilizados nos projetos deste repositó
 
 * **Linguagens:** Java (JDK 21), SQL.
 * **Frameworks:** Spring Boot.
-* **Banco de Dados:** PostgreSQL.
+* **Banco de Dados:** H2.
 * **Ferramentas:** Maven, Git.
 * **IDE:** IntelliJ IDEA.
 
